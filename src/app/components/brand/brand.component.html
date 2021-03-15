@@ -1,0 +1,16 @@
+<div class="container">
+    <table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let brand of brands">
+            <td>{{brand.id}}</td>
+            <td>{{brand.name}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
