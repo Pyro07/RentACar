@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <table class="table table-hover table-striped">
     <thead>
         <tr>
@@ -13,4 +13,15 @@
         </tr>
     </tbody>
 </table>
+</div> -->
+
+<div class="card">
+ <div class="card-body">
+    <h5 class="card-title">Brands</h5>
+ </div>
+ <ul class="list-group">
+    <li routerLink="/cars" [class]="getAllBrandClass()" (click)="clearBrands()">Tüm Markalar</li>
+    <li [class]="getCurrentBrandClass(brand)" (click)="setCurrentBrand(brand)" 
+    routerLink="/cars/brand/{{brand.id}}" *ngFor="let brand of brands">{{brand.name}}</li>
+ </ul>
 </div>

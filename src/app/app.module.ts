@@ -11,6 +11,8 @@ import { SidebarmenuComponent } from './components/sidebarmenu/sidebarmenu.compo
 import { CarComponent } from './components/car/car.component';
 import { RentComponent } from './components/rent/rent.component';
 import { CustomerComponent } from './components/customer/customer.component';
+import { CarDetailComponent } from './components/car-detail/car-detail.component';
+
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { CustomerComponent } from './components/customer/customer.component';
     CarComponent,
     RentComponent,
     CustomerComponent,
+    CarDetailComponent
   ],
   imports: [
     BrowserModule,

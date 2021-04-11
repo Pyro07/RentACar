@@ -1,4 +1,4 @@
-<table class="table table-hover table-striped">
+<!-- <table class="table table-hover table-striped">
   <thead>
     <tr>
       <th>Id</th>
@@ -11,4 +11,17 @@
       <td>{{ color.name }}</td>
     </tr>
   </tbody>
-</table>
+</table> -->
+
+
+
+<div class="card mt-3">
+ <div class="card-body">
+    <h5 class="card-title">Colors</h5>
+ </div>
+ <ul class="list-group">
+    <li routerLink="/cars" [class]="getAllColorClass()" (click)="clearColors()">Tüm Renkler</li>
+    <li [class]="getCurrentColorClass(color)" (click)="setCurrentColor(color)" 
+    routerLink="/cars/color/{{color.id}}" *ngFor="let color of colors">{{color.name}}</li>
+ </ul>
+</div>

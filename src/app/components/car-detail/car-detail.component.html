@@ -1,0 +1,44 @@
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner d-flex">
+      <div class="carousel-item align-self-center" *ngFor="let image of images; index as i; first as firstImage;" [ngClass]="{active:firstImage}">
+        <img src="https://localhost:44392/images/{{image.imagePath}}" class="d-block w-100" style="width: 700px; height: 500px; object-fit: contain;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" style="background-color: black;" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" style="background-color: black;" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- <div *ngFor="let image of images">
+    <img src="https://localhost:44392/images/{{image.imagePath}}" width="400" height="300">
+  </div> -->
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Brand</th>
+                <th>Car Name</th>
+                <th>Color</th>
+                <th>Description</th>
+                <th>Daily Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let car of cars">
+                <td>{{car.brandName}}</td>
+                <td>{{car.carName}}</td>
+                <td>{{car.colorName}}</td>
+                <td>{{car.description}}</td>
+                <td>{{car.dailyPrice}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
